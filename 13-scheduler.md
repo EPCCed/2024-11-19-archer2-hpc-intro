@@ -95,7 +95,7 @@ userid@ln03:~> sbatch --partition=standard --qos=short example-job.sh
 
 ```output
 sbatch: Warning: Your job has no time specification (--time=) and the default time is short. You can cancel your job with 'scancel <JOB_ID>' if you wish to resubmit.
-sbatch: Warning: It appears your working directory may be on the home filesystem. It is /home2/home/ta133/ta133/userid. This is not available from the compute nodes - please check that this is what you intended. You can cancel your job with 'scancel <JOBID>' if you wish to resubmit.
+sbatch: Warning: It appears your working directory may be on the home filesystem. It is /home2/home/ta180/ta180/userid. This is not available from the compute nodes - please check that this is what you intended. You can cancel your job with 'scancel <JOBID>' if you wish to resubmit.
 Submitted batch job 286949
 ```
 
@@ -106,9 +106,9 @@ compute nodes. On ARCHER2, this is the `/work` file system. The path is similar 
 `/work` at the start. Lets move there now, copy our job script across and resubmit:
 
 ```bash
-userid@ln03:~> cd /work/ta133/ta133/userid
-userid@uan01:/work/ta158/ta158/userid> cp ~/example-job.sh .
-userid@uan01:/work/ta158/ta158/userid> sbatch --partition=standard --qos=short example-job.sh
+userid@ln03:~> cd /work/ta180/ta180/userid
+userid@ln03:/work/ta180/ta180/userid> cp ~/example-job.sh .
+userid@ln03:/work/ta180/ta180/userid> sbatch --partition=standard --qos=short example-job.sh
 ```
 
 ```output
@@ -122,7 +122,7 @@ status, we check the queue using the command
 `squeue -u userid`.
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> squeue -u userid
+userid@ln03:/work/ta180/ta180/userid> squeue -u userid
 ```
 
 
@@ -144,8 +144,8 @@ interval to a more reasonable value, for example 15 seconds, with the `-n 15`
 parameter. Let's try using it to monitor another job.
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> sbatch --partition=standard --qos=short example-job.sh
-userid@uan01:/work/ta158/ta158/userid> watch -n 15 squeue -u userid
+userid@ln03:/work/ta180/ta180/userid> sbatch --partition=standard --qos=short example-job.sh
+userid@ln03:/work/ta180/ta180/userid> watch -n 15 squeue -u userid
 ```
 
 You should see an auto-updating display of your job's status. When it finishes,
@@ -183,7 +183,7 @@ script, but the `--job-name` option can be used to change the
 name of a job. Add an option to the script:
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> cat example-job.sh
+userid@ln03:/work/ta180/ta180/userid> cat example-job.sh
 ```
 
 ```output
@@ -198,8 +198,8 @@ echo "This script has finished successfully."
 Submit the job and monitor its status:
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> sbatch --partition=standard --qos=short example-job.sh
-userid@uan01:/work/ta158/ta158/userid> squeue -u userid
+userid@ln03:/work/ta180/ta180/userid> sbatch --partition=standard --qos=short example-job.sh
+userid@ln03:/work/ta180/ta180/userid> squeue -u userid
 ```
 
 
@@ -256,7 +256,7 @@ on the command line (e.g. `--partition`) into the script at this point.
 ::: solution
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> cat example-job.sh
+userid@ln03:/work/ta180/ta180/userid> cat example-job.sh
 ```
 
 ```output
@@ -295,7 +295,7 @@ killed. Let's use walltime as an example. We will request 30 seconds of
 walltime, and attempt to run a job for two minutes.
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> cat example-job.sh
+userid@ln03:/work/ta180/ta180/userid> cat example-job.sh
 ```
 
 ```output
@@ -315,13 +315,13 @@ Submit the job and wait for it to finish. Once it is has finished, check the
 log file.
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> sbatch example-job.sh
-userid@uan01:/work/ta158/ta158/userid> watch -n 15 squeue -u userid
+userid@ln03:/work/ta180/ta180/userid> sbatch example-job.sh
+userid@ln03:/work/ta180/ta180/userid> watch -n 15 squeue -u userid
 ```
 
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> cat slurm-38193.out
+userid@ln03:/work/ta180/ta180/userid> cat slurm-38193.out
 ```
 
 ```output
@@ -363,8 +363,8 @@ its job number (remember to change the walltime so that it runs long enough for
 you to cancel it before it is killed!).
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> sbatch example-job.sh
-userid@uan01:/work/ta158/ta158/userid> squeue -u userid
+userid@ln03:/work/ta180/ta180/userid> sbatch example-job.sh
+userid@ln03:/work/ta180/ta180/userid> squeue -u userid
 ```
 
 
@@ -379,9 +379,9 @@ Now cancel the job with its job number (printed in your terminal). Absence of an
 job info indicates that the job has been successfully cancelled.
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> scancel 38759
+userid@ln03:/work/ta180/ta180/userid> scancel 38759
 # It might take a minute for the job to disappear from the queue...
-userid@uan01:/work/ta158/ta158/userid> squeue -u userid
+userid@ln03:/work/ta180/ta180/userid> squeue -u userid
 ```
 
 
@@ -472,12 +472,12 @@ The program used in this example can be retrieved using wget or a browser and co
 
 **Using wget**: 
 ```bash
-userid@ln03:~> wget https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/pi-mpi.py
+userid@ln03:~> wget https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/pi-mpi.py
 ```
 
 **Using a web browser**:
 
-[https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/pi-mpi.py](https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/pi-mpi.py)
+[https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/pi-mpi.py](https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/pi-mpi.py)
 
 :::
 
@@ -522,7 +522,7 @@ And this corresponds to the four required items we described above:
 As for our other jobs, we launch using the `sbatch` command.
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> sbatch run-pi-mpi.slurm
+userid@ln03:/work/ta180/ta180/userid> sbatch run-pi-mpi.slurm
 ```
 
 The program generates no output with all details printed to the job log.

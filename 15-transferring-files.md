@@ -23,12 +23,12 @@ The program used in this example can be retrieved using wget or a browser and co
 
 **Using wget**: 
 ```bash
-userid@ln03:~> wget https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz
+userid@ln03:~> wget https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz
 ```
 
 **Using a web browser**: 
 
-[https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz](https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz)
+[https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz](https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz)
 :::
 
 Computing with a remote computer offers very limited use if we cannot get files
@@ -49,11 +49,11 @@ and `wget https://some/link/to/a/file`. Try it out by downloading
 some material we'll use later on, from a terminal on your local machine.
 
 ```bash
-[user@laptop ~]$ curl -O https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz
+[user@laptop ~]$ curl -O https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz
 ```
 or
 ```bash
-[user@laptop ~]$ wget https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz
+[user@laptop ~]$ wget https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz
 ```
 
 ::: discussion
@@ -126,9 +126,9 @@ Using `curl` or `wget` commands like the following:
 
 ```bash
 [user@laptop ~]$ ssh userid@login.archer2.ac.uk
-userid@ln03:~> curl -O https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz
+userid@ln03:~> curl -O https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz
 or
-userid@ln03:~> wget https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/hpc-intro-data.tar.gz
+userid@ln03:~> wget https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/hpc-intro-data.tar.gz
 ```
 
 Did it work? If not, what does the terminal output tell you about what

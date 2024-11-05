@@ -204,7 +204,7 @@ If you are already registered on the SAFE you do not need to re-register. Please
 
 1. [Login to SAFE](https://safe.epcc.ed.ac.uk)
 2. Go to the Menu "Login accounts" and select "Request login account"
-3. Choose the `ta158` project “Choose Project for Machine Account” box and click "Next"
+3. Choose the `ta180` project “Choose Project for Machine Account” box and click "Next"
 4. On the next page, the ARCHER2 system should be selected. Click "Next"
 5. Enter the username you would prefer to use on ARCHER2. Every username must be unique, so if your chosen name is taken, you will need to choose another
 
@@ -235,7 +235,7 @@ verify your identity beyond a password and username.
 
 To setup your MFA TOTP you will need an authenticator application on your phone or laptop. Follow the 
 [steps](https://epcced.github.io/safe-docs/safe-for-users/#how-to-turn-on-mfa-on-your-machine-account)
-at the SAFE documentation, ensuring you create the code for your `ta158` project
+at the SAFE documentation, ensuring you create the code for your `ta180` project
 account.
 
 You will only be prompted at login for your TOTP code once a day.

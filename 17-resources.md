@@ -64,12 +64,12 @@ The program used in this example can be retrieved using wget or a browser and co
 
 **Using wget**: 
 ```bash
-userid@ln03:~> wget https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/pi-mpi.py
+userid@ln03:~> wget https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/pi-mpi.py
 ```
 
 **Using a web browser**:
 
-[https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/pi-mpi.py](https://epcced.github.io/2024-06-20-hpc-intro-shampton/files/pi-mpi.py)
+[https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/pi-mpi.py](https://epcced.github.io/2024-11-06-archer2-hpc-intro/files/pi-mpi.py)
 
 :::
 
@@ -152,7 +152,7 @@ by the application itself and also includes static overheads from running the jo
 use `sacct -l -j` with the job ID, e.g.:
 
 ```bash
-userid@uan01:/work/ta158/ta158/userid> sacct -l -j 12345
+userid@ln03:/work/ta180/ta180/userid> sacct -l -j 12345
 ```
 ```output
 
